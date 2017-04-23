@@ -62,6 +62,7 @@
                     display: block;
                     padding: 0 10px;
                     font-size: 14px;
+                    color: #e8e8e8;
                     &:hover {
                         color: #fff;
                     }

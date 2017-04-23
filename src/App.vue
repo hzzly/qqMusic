@@ -5,6 +5,8 @@
 			<router-view></router-view>
 		</div>
 		<v-footer></v-footer>
+		<div class="bg_player_mask"></div>
+		<div class="bg_player" :style="{ backgroundImage: 'url(' + backgroundImage + ')' }"></div>
 	</div>
 </template>
 
@@ -17,9 +19,14 @@ export default {
 		VHeader,
 		VFooter
 	},
+	data() {
+		return {
+			backgroundImage: 'https://avatars2.githubusercontent.com/u/16360684?v=3&s=460'
+		}
+	},
 	computed: {
 		blackBg() {
-			return true;
+			return false;
 		}
 	}
 }
@@ -27,13 +34,20 @@ export default {
 
 <style lang="scss">
 @font-face {
-	font-family: 'icon';
-	/* project id 285311 */
-	src: url('//at.alicdn.com/t/font_uxc8gojl4rifi529.eot');
-	src: url('//at.alicdn.com/t/font_uxc8gojl4rifi529.eot?#iefix') format('embedded-opentype'),
-	url('//at.alicdn.com/t/font_uxc8gojl4rifi529.woff') format('woff'),
-	url('//at.alicdn.com/t/font_uxc8gojl4rifi529.ttf') format('truetype'),
-	url('//at.alicdn.com/t/font_uxc8gojl4rifi529.svg#iconfont') format('svg');
+  font-family: 'iconfont';  /* project id 285311 */
+  src: url('//at.alicdn.com/t/font_48tsyeocb3boi529.eot');
+  src: url('//at.alicdn.com/t/font_48tsyeocb3boi529.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_48tsyeocb3boi529.woff') format('woff'),
+  url('//at.alicdn.com/t/font_48tsyeocb3boi529.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_48tsyeocb3boi529.svg#iconfont') format('svg');
+}
+
+.icon {
+	font-family: "iconfont" !important;
+  	font-size: 18px;
+  	font-style: normal;
+	color: #bdbdbe;
+    color: rgba(225,225,225,.8);
 }
 
 #app {
@@ -51,6 +65,25 @@ export default {
 	&.blackbg {
 		background-color: rgb(41, 42, 43);
 		color: #fff;
+	}
+	.bg_player_mask,.bg_player {
+		position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+	}
+	.bg_player_mask {
+		background-color: rgba(0,0,0,.35);
+        z-index: -1;
+	}
+	.bg_player {
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: 50%;
+		filter: blur(65px);
+		opacity: .6;
+        z-index: -2;
 	}
 }
 </style>
