@@ -35,11 +35,11 @@ export default {
 <style lang="scss">
 @font-face {
   font-family: 'iconfont';  /* project id 285311 */
-  src: url('//at.alicdn.com/t/font_48tsyeocb3boi529.eot');
-  src: url('//at.alicdn.com/t/font_48tsyeocb3boi529.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_48tsyeocb3boi529.woff') format('woff'),
-  url('//at.alicdn.com/t/font_48tsyeocb3boi529.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_48tsyeocb3boi529.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_ir3es9nr8q4r6bt9.eot');
+  src: url('//at.alicdn.com/t/font_ir3es9nr8q4r6bt9.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_ir3es9nr8q4r6bt9.woff') format('woff'),
+  url('//at.alicdn.com/t/font_ir3es9nr8q4r6bt9.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_ir3es9nr8q4r6bt9.svg#iconfont') format('svg');
 }
 
 .icon {
@@ -54,6 +54,7 @@ export default {
 	font-family: 'Avenir', 'PingFang SC', Helvetica, Arial, sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	font-size: 14px;
 	display: flex;
 	flex-direction: column;
 	height: 100%;
@@ -61,6 +62,7 @@ export default {
 		flex: 1;
 		overflow: auto;
 		overflow-x: hidden;
+		margin-bottom: 20px;
 	}
 	&.blackbg {
 		background-color: rgb(41, 42, 43);
